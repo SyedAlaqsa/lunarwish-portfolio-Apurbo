@@ -1,0 +1,514 @@
+/* =========================
+   Global Styles
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #f0e6d6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #f0e6d6;
+}
+
+/* =========================
+   Header Section
+========================= */
+.header-section {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #0d0d0d 0%, #0a0a0a 100%);
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #f0e6d6;
+  letter-spacing: 8px;
+}
+
+.brand-slogan {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: #d4c18a;
+  font-style: italic;
+}
+
+/* =========================
+   Profile Section
+========================= */
+.profile-section {
+  padding: 6rem 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #d4c18a;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(212, 193, 138, 0.5);
+  transition: transform 0.5s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.share-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #000;
+  color: #f0e6d6;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(212, 193, 138, 0.6);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.share-btn:hover {
+  background: #1a1a1a;
+  transform: scale(1.1);
+}
+
+.profile-details {
+  max-width: 650px;
+}
+
+.profile-details h2 {
+  white-space: nowrap;                  /* keep name in one line */
+  font-size: clamp(14px, 4vw, 3rem);    /* responsive size */
+  color: #f0e6d6;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  font-size: 1.3rem;
+  color: #d4c18a;
+  margin-bottom: 1.5rem;
+}
+
+.profile-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0d8c3;
+}
+
+/* =========================
+   About Section
+========================= */
+.about-section {
+  padding: 6rem 5%;
+  background: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.about-card {
+  background: #0a0a0a;
+  border: 2px solid #d4c18a;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  height: 280px;
+  box-shadow: 0 0 20px rgba(212, 193, 138, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 40px rgba(212, 193, 138, 0.7);
+}
+
+.about-card h3 {
+  color: #d4c18a;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-card p {
+  color: #e0d8c3;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   Wish Journey Section (NEW)
+========================= */
+.journey-section {
+  padding: 6rem 5%;
+  background: #0a0a0a;
+  text-align: center;
+  border-top: 2px solid #1f1f1f;
+  border-bottom: 2px solid #1f1f1f;
+}
+
+.journey-text {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0d8c3;
+}
+
+.journey-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.journey-box {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  background: #0b0b0b;
+  border: 2px solid #d4c18a;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(212,193,138,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.journey-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 36px rgba(212,193,138,0.55);
+}
+
+.journey-track {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: auto;            /* scrollable box */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.journey-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+  user-select: none;
+  pointer-events: none;        /* click anywhere on box to advance */
+}
+
+/* optional scrollbar style */
+.journey-track::-webkit-scrollbar {
+  height: 6px;
+}
+.journey-track::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 6px;
+}
+
+/* =========================
+   Our Goal Section
+========================= */
+.goal-section {
+  padding: 6rem 5%;
+  text-align: center;
+  background: #0d0d0d;
+}
+
+.goal-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0d8c3;
+}
+
+/* =========================
+   Revenue Circles Section
+========================= */
+.revenue-section {
+  padding: 4rem 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #0a0a0a;
+}
+
+.circle-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.circle svg {
+  transform: rotate(-90deg);
+  width: 120px;
+  height: 120px;
+}
+
+.circle svg circle {
+  fill: none;
+  stroke-width: 10;
+  stroke: #1a1a1a;
+  r: 50;
+  cx: 60;
+  cy: 60;
+}
+
+.circle svg circle:nth-child(2) {
+  stroke: #d4c18a;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1s ease-out;
+  stroke-linecap: round;
+}
+
+.circle-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f0e6d6;
+}
+
+.circle-content h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #d4c18a;
+}
+
+.circle-content p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* =========================
+   Products Section
+========================= */
+.products-section {
+  padding: 6rem 5%;
+  background: #0a0a0a;
+  position: relative;
+}
+
+.products-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#starCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #0a0a0a;
+  outline: none;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px solid #d4c18a;
+  text-align: center;
+  z-index: 10;
+  width: 350px;
+  box-shadow: 0 0 35px rgba(212, 193, 138, 0.7);
+  transition: opacity 0.3s ease;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.popup h4 {
+  color: #d4c18a;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.popup p {
+  color: #e0d8c3;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.popup button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  background: #d4c18a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.popup button:hover {
+  background: #bfa35a;
+  transform: scale(1.05);
+}
+
+/* =========================
+   Contact Section
+========================= */
+.contact-section {
+  padding: 6rem 5%;
+  background: #0d0d0d;
+  text-align: center;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-container button {
+  background: #d4c18a;
+  border: none;
+  color: #0a0a0a;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-container button:hover {
+  background: #bfa35a;
+}
+
+.social-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-btn {
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #d4c18a;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #d4c18a;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #1a1a1a;
+  transform: scale(1.05);
+}
+
+/* =========================
+   Footer Section
+========================= */
+.footer-section {
+  padding: 3rem 5%;
+  text-align: center;
+  background: #0d0d0d;
+  color: #f0e6d6;
+  font-size: 0.95rem;
+  border-top: 2px solid #d4c18a;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+  .about-cards {
+    flex-direction: column;
+  }
+  .journey-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .circle-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .products-container {
+    height: 420px;
+  }
+}
