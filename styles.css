@@ -426,18 +426,26 @@ html {
    Contact Section
 ========================= */
 .contact-section {
-  padding: 6rem 5%;
+  padding: clamp(2rem, 5vw, 6rem) 5%;
   background: #0d0d0d;
   text-align: center;
 }
 
 .contact-container p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  flex-wrap: wrap; /* makes it wrap nicely on small screens */
+}
+
+@media (max-width: 768px) {
+  .contact-container p {
+    flex-direction: column; /* stack items for mobile */
+    gap: 0.5rem;
+  }
 }
 
 .contact-container button {
@@ -512,3 +520,4 @@ html {
     height: 420px;
   }
 }
+
