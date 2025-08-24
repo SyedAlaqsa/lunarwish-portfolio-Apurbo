@@ -58,20 +58,30 @@ html {
    Profile Section
 ========================= */
 .profile-section {
-  padding: 6rem 5%;
+  padding: clamp(2rem, 5vw, 6rem) 5%; /* auto scales */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: clamp(1.5rem, 4vw, 3rem); /* gap resizes */
 }
 
 .profile-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: clamp(1.5rem, 4vw, 3rem);
   max-width: 1200px;
+  width: 100%; /* make it scale with screen */
 }
+
+/* ✅ Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column; /* stack items */
+    align-items: center;
+  }
+}
+
 
 .profile-image-container {
   position: relative;
@@ -122,17 +132,19 @@ html {
 }
 
 .profile-details h2 {
-  white-space: nowrap;                  /* keep name in one line */
-  font-size: clamp(14px, 4vw, 3rem);    /* responsive size */
+  white-space: nowrap;                     
+  font-size: clamp(1.5rem, 4vw, 3rem); /* ✅ resizable name */
   color: #f0e6d6;
   margin-bottom: 0.5rem;
+  font-weight: 700; /* optional for strong name */
 }
 
 .role {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);   /* ✅ resizable role */
   color: #d4c18a;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
+
 
 .profile-description {
   font-size: 1.2rem;
@@ -520,4 +532,5 @@ html {
     height: 420px;
   }
 }
+
 
